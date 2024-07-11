@@ -15,7 +15,7 @@ return {...state, total:total,  cartList:updatedCartList};
         },
         remove(state, action){
             const updatedCartList = state.cartList.filter(item => item.id !== action.payload.id);
-            const total = state.total  + action.payload.price;
+            const total = state.total  - action.payload.price;
             return {...state, total:total,  cartList:updatedCartList};
         }
     }
